@@ -24,7 +24,7 @@ readonly ENV_CONFIG="${CONFDIR}/env-config.json"
 readonly CWA_NAME='amazon-cloudwatch-agent'
 readonly ALL_CONFIG='all'
 
-SYSTEMD='false'
+SYSTEMD='true'
 
 UsageString="
 
@@ -354,19 +354,6 @@ main() {
      cwa_config_location=''
      restart='false'
      mode='ec2'
-
-     # detect which init system is in use
-     if [ "$(/sbin/init --version 2>/dev/null | grep -c upstart)" = 1 ]; then
-          SYSTEMD='false'
-     elif [ "$(systemctl | grep -c -E '\-\.mount\s')" = 1 ]; then
-          SYSTEMD='true'
-     elif [ -f /etc/init.d/cron ] && [ ! -h /etc/init.d/cron ]; then
-          echo "sysv-init is not supported" >&2
-          exit 1
-     else
-          echo "unknown init system" >&2
-          exit 1
-     fi
 
      OPTIND=1
      while getopts ":hsa:c:m:l:" opt; do

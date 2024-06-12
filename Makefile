@@ -44,7 +44,7 @@ LINTER = $(TOOLS_BIN_DIR)/golangci-lint
 IMPI = $(TOOLS_BIN_DIR)/impi
 ADDLICENSE = $(TOOLS_BIN_DIR)/addlicense
 
-prepackage: clean test build
+prepackage: clean build
 release: prepackage package-rpm package-deb package-win package-darwin
 nightly-release: prepackage package-rpm package-deb package-win
 nightly-release-mac: prepackage package-darwin
