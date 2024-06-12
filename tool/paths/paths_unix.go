@@ -9,7 +9,7 @@ package paths
 import "path/filepath"
 
 const (
-	AgentDir             = "/opt/aws/amazon-cloudwatch-agent"
+	AgentDir             = "/var/aws/amazon-cloudwatch-agent"
 	BinaryDir            = "bin"
 	JsonDir              = "amazon-cloudwatch-agent.d"
 	TranslatorBinaryName = "config-translator"

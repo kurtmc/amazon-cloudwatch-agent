@@ -71,7 +71,7 @@ Sample Configuration in TOML format:
     [inputs.prometheus.ecs_service_discovery]
       sd_cluster_region = "us-east-2"
       sd_frequency = "15s"
-      sd_result_file = "/opt/aws/amazon-cloudwatch-agent/etc/ecs_sd_targets.yaml"
+      sd_result_file = "/var/aws/amazon-cloudwatch-agent/etc/ecs_sd_targets.yaml"
       sd_target_cluster = "EC2-Justin-Testing"
       [inputs.prometheus.ecs_service_discovery.docker_label]
         sd_job_name_label = "ECS_PROMETHEUS_JOB_NAME"

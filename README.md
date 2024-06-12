@@ -89,7 +89,7 @@ For example, the following excerpt of the CloudWatch agent configuration file pu
 {
   "collect_list": [
     {
-      "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/test.log",
+      "file_path": "/var/aws/amazon-cloudwatch-agent/logs/test.log",
       "log_group_name": "test.log",
       "log_stream_name": "test.log",
       "filters": [

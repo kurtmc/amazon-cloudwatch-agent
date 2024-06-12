@@ -3,5 +3,5 @@
 # SPDX-License-Identifier: MIT
 
 if [ "$1" = "remove" ]; then
-     /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a preun
+     /var/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a preun
 fi

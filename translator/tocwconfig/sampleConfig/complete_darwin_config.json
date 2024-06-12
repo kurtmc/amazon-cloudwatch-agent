@@ -1,7 +1,7 @@
 {
   "agent": {
     "metrics_collection_interval": 10,
-    "logfile": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
+    "logfile": "/var/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
     "internal": true,
     "debug": true,
     "aws_sdk_log_level": "LogDebug",
@@ -152,13 +152,13 @@
       "files": {
         "collect_list": [
           {
-            "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
+            "file_path": "/var/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
             "log_group_name": "amazon-cloudwatch-agent.log",
             "log_stream_name": "amazon-cloudwatch-agent.log",
             "timezone": "UTC"
           },
           {
-            "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/test.log",
+            "file_path": "/var/aws/amazon-cloudwatch-agent/logs/test.log",
             "log_group_name": "test.log",
             "log_stream_name": "test.log",
             "timezone": "UTC",
