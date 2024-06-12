@@ -10,7 +10,7 @@
         <true/>
         <key>ProgramArguments</key>
         <array>
-              <string>/opt/aws/amazon-cloudwatch-agent/bin/start-amazon-cloudwatch-agent</string>
+              <string>/var/aws/amazon-cloudwatch-agent/bin/start-amazon-cloudwatch-agent</string>
         </array>
         <key>KeepAlive</key>
         <dict>

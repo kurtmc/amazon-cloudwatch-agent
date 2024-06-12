@@ -1,1 +1,1 @@
-/opt/aws/amazon-cloudwatch-agent/etc/common-config.toml
+/var/aws/amazon-cloudwatch-agent/etc/common-config.toml

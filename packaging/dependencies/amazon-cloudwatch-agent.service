@@ -13,7 +13,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/opt/aws/amazon-cloudwatch-agent/bin/start-amazon-cloudwatch-agent
+ExecStart=/var/aws/amazon-cloudwatch-agent/bin/start-amazon-cloudwatch-agent
 KillMode=process
 Restart=on-failure
 RestartSec=60s

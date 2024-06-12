@@ -13,7 +13,7 @@ echo "BUILD_SPACE: ${BUILD_SPACE}    agent_version: ${AGENT_VERSION}  pre-packag
 mkdir -p ${BUILD_SPACE}/bin/darwin/${ARCH}/
 
 echo "Creating darwin folders"
-MACHINE_ROOT="/opt/aws/amazon-cloudwatch-agent/"
+MACHINE_ROOT="/var/aws/amazon-cloudwatch-agent/"
 BUILD_ROOT="${BUILD_SPACE}/private/darwin_${ARCH}"
 TAR_NAME="amazon-cloudwatch-agent.tar.gz"
 
@@ -29,7 +29,7 @@ mkdir -p ${BUILD_ROOT}/Library/LaunchDaemons
 ############################# create the symbolic links
 # log
 mkdir -p ${BUILD_ROOT}/var/log/amazon
-ln -f -s /opt/aws/amazon-cloudwatch-agent/logs ${BUILD_ROOT}/var/log/amazon/amazon-cloudwatch-agent
+ln -f -s /var/aws/amazon-cloudwatch-agent/logs ${BUILD_ROOT}/var/log/amazon/amazon-cloudwatch-agent
 
 echo "Copying application files"
 cp ${PREPKGPATH}/LICENSE ${BUILD_ROOT}${MACHINE_ROOT}

@@ -9,7 +9,7 @@ import (
 	"github.com/aws/amazon-cloudwatch-agent/translator/util"
 )
 
-const File_State_Folder_Linux = "/opt/aws/amazon-cloudwatch-agent/logs/state"
+const File_State_Folder_Linux = "/var/aws/amazon-cloudwatch-agent/logs/state"
 
 func GetFileStateFolder() (fileStateFolder string) {
 	if translator.GetTargetPlatform() == config.OS_TYPE_WINDOWS {

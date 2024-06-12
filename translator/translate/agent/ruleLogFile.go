@@ -12,7 +12,7 @@ import (
 	"github.com/aws/amazon-cloudwatch-agent/translator/util"
 )
 
-const Linux_Darwin_Default_Log_Dir = "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log"
+const Linux_Darwin_Default_Log_Dir = "/var/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log"
 
 type Logfile struct {
 }

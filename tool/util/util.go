@@ -50,7 +50,7 @@ func getBackupDir() string {
 	case "windows":
 		return filepath.Join(os.Getenv("APPDATA"), "Amazon", "CloudWatchAgent", "etc", "backup-configs")
 	default:
-		return "/opt/aws/amazon-cloudwatch-agent/etc/backup-configs"
+		return "/var/aws/amazon-cloudwatch-agent/etc/backup-configs"
 	}
 }
 func FileBackup(filePath string, dirPath string) error {

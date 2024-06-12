@@ -4,7 +4,7 @@
       "files": {
         "collect_list": [
           {
-            "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
+            "file_path": "/var/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log",
             "log_group_name": "amazon-cloudwatch-agent.log",
             "log_stream_name": "amazon-cloudwatch-agent.log",
             "multi_line_start_pattern": "{timestampe_format}",
@@ -12,13 +12,13 @@
             "timezone": "UTC"
           },
           {
-            "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/test.log",
+            "file_path": "/var/aws/amazon-cloudwatch-agent/logs/test.log",
             "log_group_name": "test.log",
             "log_stream_name": "test.log",
             "timezone": "Local"
           },
           {
-            "file_path": "/opt/aws/amazon-cloudwatch-agent/logs/*",
+            "file_path": "/var/aws/amazon-cloudwatch-agent/logs/*",
             "blacklist": "agent.log*|env.log|profiler.log|\\.\\d$",
             "publish_multi_logs": true,
             "timezone": "UTC"

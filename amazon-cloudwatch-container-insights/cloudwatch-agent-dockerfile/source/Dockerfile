@@ -26,18 +26,18 @@ FROM $CERT_IMAGE as cert
 
 # Need to repeat the ARG after each FROM
 ARG TARGETARCH
-RUN mkdir -p /opt/aws/amazon-cloudwatch-agent/etc
-RUN mkdir -p /opt/aws/amazon-cloudwatch-agent/var
+RUN mkdir -p /var/aws/amazon-cloudwatch-agent/etc
+RUN mkdir -p /var/aws/amazon-cloudwatch-agent/var
 RUN apt-get update &&  \
     apt-get install -y ca-certificates && \
     rm -rf /var/lib/apt/lists/*
-COPY --from=builder /go/src/github.com/aws/amazon-cloudwatch-agent/build/bin/linux_${TARGETARCH}/ /opt/aws/amazon-cloudwatch-agent/bin
+COPY --from=builder /go/src/github.com/aws/amazon-cloudwatch-agent/build/bin/linux_${TARGETARCH}/ /var/aws/amazon-cloudwatch-agent/bin
 
 FROM scratch
 
 COPY --from=cert /tmp /tmp
 COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
-COPY --from=cert /opt/aws/amazon-cloudwatch-agent /opt/aws/amazon-cloudwatch-agent
+COPY --from=cert /var/aws/amazon-cloudwatch-agent /var/aws/amazon-cloudwatch-agent
 
 ENV RUN_IN_CONTAINER="True"
-ENTRYPOINT ["/opt/aws/amazon-cloudwatch-agent/bin/start-amazon-cloudwatch-agent"]
+ENTRYPOINT ["/var/aws/amazon-cloudwatch-agent/bin/start-amazon-cloudwatch-agent"]

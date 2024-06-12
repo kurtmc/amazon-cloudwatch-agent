@@ -297,7 +297,7 @@ service:
             encoding: console
             level: debug
             output_paths:
-                - /opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log
+                - /var/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log
             sampling:
                 enabled: true
                 initial: 2

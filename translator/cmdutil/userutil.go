@@ -17,9 +17,9 @@ import (
 )
 
 var (
-	agentLogDir = "/opt/aws/amazon-cloudwatch-agent/logs"
-	agentVarDir = "/opt/aws/amazon-cloudwatch-agent/var"
-	agentEtcDir = "/opt/aws/amazon-cloudwatch-agent/etc"
+	agentLogDir = "/var/aws/amazon-cloudwatch-agent/logs"
+	agentVarDir = "/var/aws/amazon-cloudwatch-agent/var"
+	agentEtcDir = "/var/aws/amazon-cloudwatch-agent/etc"
 )
 
 type ChownFunc func(name string, uid, gid int) error

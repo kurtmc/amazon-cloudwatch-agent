@@ -16,7 +16,7 @@
 set -e
 set -u
 
-readonly AGENTDIR="/opt/aws/amazon-cloudwatch-agent"
+readonly AGENTDIR="/var/aws/amazon-cloudwatch-agent"
 readonly CMDDIR="${AGENTDIR}/bin"
 readonly CONFDIR="${AGENTDIR}/etc"
 readonly LOGDIR="${AGENTDIR}/logs"

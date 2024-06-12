@@ -21,7 +21,7 @@ const (
 
 	SectionKeyConfigPath = "prometheus_config_path"
 	defaultLinuxPath     = "/etc/cwagentconfig/prometheus.yaml"
-	linuxDownloadingFile = "/opt/aws/amazon-cloudwatch-agent/etc/prometheus.yaml"
+	linuxDownloadingFile = "/var/aws/amazon-cloudwatch-agent/etc/prometheus.yaml"
 
 	windowsDownloadingFile = "\\Amazon\\AmazonCloudWatchAgent\\prometheus.yaml"
 )
